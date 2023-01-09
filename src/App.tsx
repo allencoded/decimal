@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import UserSwitch from './components/forms/UserSwitch';
-import Invoices from './components/invoices/invoices';
+import Invoices from './components/invoices/Invoices';
 
 function App() {
   const [isAdmin, setAdmin] = useState(false);
