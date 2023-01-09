@@ -14,7 +14,7 @@ function App() {
     <div className="app">
       <UserSwitch isAdmin={isAdmin} toggleAdmin={toggleAdmin} />
       <div className="app-container">
-        <Invoices />
+        <Invoices isAdmin={isAdmin} />
       </div>
     </div>
   );

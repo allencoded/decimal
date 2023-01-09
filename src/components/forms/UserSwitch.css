@@ -64,6 +64,8 @@
   .user-switch-container {
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
   }
 
   .user-name {

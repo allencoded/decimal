@@ -39,13 +39,17 @@ import InvoicesTable from "./InvoicesTable";
   }
 });
 
-function Invoices() {
+interface IProps {
+  isAdmin: boolean;
+}
+
+function Invoices({ isAdmin }: IProps) {
   const [selectedInvoice, setSelectedInvoice] = useState<undefined | Record<string, any>>();
 
   return (<div>
     <h1>Invoices</h1>
     <InvoicesTable setSelectedInvoice={setSelectedInvoice} />
-    {selectedInvoice && <InvoicesDetail invoice={selectedInvoice} />}
+    {selectedInvoice && <InvoicesDetail invoice={selectedInvoice} isAdmin={isAdmin} />}
   </div>)
 }
 
