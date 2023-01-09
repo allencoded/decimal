@@ -1,0 +1,18 @@
+.table-border {
+  border: solid 1px blue;
+  margin-top: 10px;
+}
+
+.table-header {
+  border-bottom: solid 3px red;
+  background: aliceblue;
+  color: black;
+  font-weight: bold;
+}
+
+.table-cells {
+  padding: 10px;
+  border: solid 1px gray;
+  background: papayawhip;
+  cursor: pointer;
+}
