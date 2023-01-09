@@ -1,7 +1,15 @@
-import { useState } from 'react';
-import './App.css';
-import UserSwitch from './components/forms/UserSwitch';
-import Invoices from './components/invoices/Invoices';
+import { createContext, useState } from "react";
+import "./App.css";
+import UserSwitch from "./components/forms/UserSwitch";
+import Invoices from "./components/invoices/Invoices";
+
+/**
+ * User context - checks for and sets isAdmin
+ */
+export const UserContext = createContext({
+  isAdmin: false,
+  toggleAdmin: () => {},
+});
 
 function App() {
   const [isAdmin, setAdmin] = useState(false);
@@ -10,13 +18,17 @@ function App() {
     setAdmin(!isAdmin);
   }
 
+  const contextValue = { isAdmin, toggleAdmin };
+
   return (
-    <div className="app">
-      <UserSwitch isAdmin={isAdmin} toggleAdmin={toggleAdmin} />
-      <div className="app-container">
-        <Invoices isAdmin={isAdmin} />
+    <UserContext.Provider value={contextValue}>
+      <div className="app">
+        <UserSwitch />
+        <div className="app-container">
+          <Invoices />
+        </div>
       </div>
-    </div>
+    </UserContext.Provider>
   );
 }
 

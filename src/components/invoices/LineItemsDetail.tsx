@@ -27,7 +27,7 @@ function LineItemsDetail({ lineItems }: IProps) {
           <ul>Name: {lineItem.name}</ul>
           <ul>Quantity: {lineItem.quantity}</ul>
           <ul>Amount: {lineItem.amount}</ul>
-          <ul>Deferred: {lineItem.is_deferred ? 'true' : 'false'}</ul>
+          <ul>Deferred: {lineItem.is_deferred ? "true" : "false"}</ul>
           <ul>Started: {moment(lineItem.start_date).format("MMM Do YY")}</ul>
           {lineItem.schedule && (
             <ul>

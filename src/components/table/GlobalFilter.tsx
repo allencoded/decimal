@@ -5,10 +5,10 @@ interface IProps {
 
 function GlobalFilter({ filter, setFilter }: IProps) {
   return (
-  <div>
-    <span style={{ fontWeight: 'bold'}}>Search: {' '}</span>
-    <input value={filter || ''} onChange={e => setFilter(e.target.value)} />
-  </div>
+    <div>
+      <span style={{ fontWeight: "bold" }}>Search: </span>
+      <input value={filter || ""} onChange={(e) => setFilter(e.target.value)} />
+    </div>
   );
 }
 

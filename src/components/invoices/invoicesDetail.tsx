@@ -1,13 +1,15 @@
 import moment from "moment";
+import { useContext } from "react";
+import { UserContext } from "../../App";
 import LineItemsDetail from "./LineItemsDetail";
 import WorkFlowDetail from "./WorkFlowDetail";
 
 interface IProps {
   invoice: any; // todo: get rid of any and type this
-  isAdmin: boolean;
 }
 
-function InvoicesDetail({ invoice, isAdmin }: IProps) {
+function InvoicesDetail({ invoice }: IProps) {
+  const { isAdmin } = useContext(UserContext);
   return (
     <div style={{ textAlign: "left" }}>
       <h1>Invoice Details</h1>

@@ -10,7 +10,7 @@ import InvoicesTable from "./InvoicesTable";
 /**
  * Mocks the api/invoices call for simulating real world api calls
  */
- createServer({
+createServer({
   routes() {
     this.get("/api/invoices", () => {
       const { invoices } = invoiceList;
@@ -36,21 +36,21 @@ import InvoicesTable from "./InvoicesTable";
       const { skus } = skuList;
       return skus;
     });
-  }
+  },
 });
 
-interface IProps {
-  isAdmin: boolean;
-}
+function Invoices() {
+  const [selectedInvoice, setSelectedInvoice] = useState<
+    undefined | Record<string, any>
+  >();
 
-function Invoices({ isAdmin }: IProps) {
-  const [selectedInvoice, setSelectedInvoice] = useState<undefined | Record<string, any>>();
-
-  return (<div>
-    <h1>Invoices</h1>
-    <InvoicesTable setSelectedInvoice={setSelectedInvoice} />
-    {selectedInvoice && <InvoicesDetail invoice={selectedInvoice} isAdmin={isAdmin} />}
-  </div>)
+  return (
+    <div>
+      <h1>Invoices</h1>
+      <InvoicesTable setSelectedInvoice={setSelectedInvoice} />
+      {selectedInvoice && <InvoicesDetail invoice={selectedInvoice} />}
+    </div>
+  );
 }
 
 export default Invoices;
