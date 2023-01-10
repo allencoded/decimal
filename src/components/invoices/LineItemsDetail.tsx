@@ -1,28 +1,18 @@
 import moment from "moment";
-
-interface LineItem {
-  units: string;
-  schedule: {
-    duration: string;
-    units: string;
-  };
-  is_deferred: string;
-  start_date: string;
-  amount: string;
-  quantity: string;
-  sku: string;
-  name: string;
-}
+import { ILineItem } from "./invoiceTypes";
 
 interface IProps {
-  lineItems: Array<LineItem>;
+  lineItems: Array<ILineItem>;
 }
 
+/**
+ * Displays a invoice list of line items
+ */
 function LineItemsDetail({ lineItems }: IProps) {
   return (
     <div>
       <h3>Line Items:</h3>
-      {lineItems.map((lineItem: LineItem) => (
+      {lineItems.map((lineItem: ILineItem) => (
         <div key={lineItem.sku?.toString()}>
           <ul>Name: {lineItem.name}</ul>
           <ul>Quantity: {lineItem.quantity}</ul>

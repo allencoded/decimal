@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { useTable, Column, useSortBy, useGlobalFilter } from "react-table";
+import { IInvoice } from "../invoices/invoiceTypes";
 import GlobalFilter from "./GlobalFilter";
 import "./Table.css";
 

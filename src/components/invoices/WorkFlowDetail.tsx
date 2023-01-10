@@ -1,10 +1,11 @@
-// TODO: Make an api call to get the specific workflow detail for this invoice then display the workflow details.
-
+/**
+ * Dispalys Admin only items
+ */
 function WorkFlowDetail() {
   return (
     <div>
-      <h3>Workflow Details</h3>
-      <div>Only admins see this!</div>
+      <h2>Workflow Status</h2>
+      This account is on hold currently.
     </div>
   );
 }

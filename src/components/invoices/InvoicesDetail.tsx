@@ -1,13 +1,17 @@
 import moment from "moment";
 import { useContext } from "react";
 import { UserContext } from "../../App";
+import { IInvoice } from "./invoiceTypes";
 import LineItemsDetail from "./LineItemsDetail";
 import WorkFlowDetail from "./WorkFlowDetail";
 
 interface IProps {
-  invoice: any; // todo: get rid of any and type this
+  invoice: IInvoice | Record<string, any>; // todo: get rid of any and type this
 }
 
+/**
+ * Displays the invoice details.
+ */
 function InvoicesDetail({ invoice }: IProps) {
   const { isAdmin } = useContext(UserContext);
   return (

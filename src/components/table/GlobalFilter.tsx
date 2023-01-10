@@ -3,6 +3,9 @@ interface IProps {
   setFilter: (filterValue: string) => void;
 }
 
+/**
+ * Displays form for globally filtering the table data
+ */
 function GlobalFilter({ filter, setFilter }: IProps) {
   return (
     <div>

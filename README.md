@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Invoices
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is met to illustrate and be a techincal coding talking point and accomplishes 
+demonstrating the following frontend react skills:
 
-## Available Scripts
+- state managment using react context
+- api calls using miragejs to simulate real world api fetch calls
+- displaying results in a table that is sortable and filterable
 
-In the project directory, you can run:
+This is not a demonstration of unit testing or production ready design in this iteration.
 
-### `npm start`
+# Technology Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React table was utilized to display the results of the invoice data fetch requests. The table allows sorting and filtering. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+MirageJS was used to take mock data and provide the ability to simulate real api fetch calls.
 
-### `npm test`
+React Context was used to avoid prop drilling. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+MomentJS was used to make dates more user friendly to read.
 
-### `npm run build`
+# How to use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application should land on the invoice view and display invoice data in a table. You select one of the rows in 
+the table to see more information on the invoice listed below the table. A floating top admin/user toggle switch is 
+present on the top left side of the page to allow you to switch between being an admin or regular user. The admin gets
+to see the status of the workflow while the regular user cannot.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Starting the App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This is based off the boiler plate create-react-app. You need to `npm install` then `npm start` to run the application locally.

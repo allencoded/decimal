@@ -6,6 +6,7 @@ import * as accountList from "../../mock-api/list-accounts.json";
 import * as skuList from "../../mock-api/list-skus.json";
 import InvoicesDetail from "./InvoicesDetail";
 import InvoicesTable from "./InvoicesTable";
+import { IInvoice } from "./invoiceTypes";
 
 /**
  * Mocks the api/invoices call for simulating real world api calls
@@ -39,9 +40,12 @@ createServer({
   },
 });
 
+/**
+ * Displays Invoice Table and Invoice Detail
+ */
 function Invoices() {
   const [selectedInvoice, setSelectedInvoice] = useState<
-    undefined | Record<string, any>
+    undefined | IInvoice | Record<string, any>
   >();
 
   return (
